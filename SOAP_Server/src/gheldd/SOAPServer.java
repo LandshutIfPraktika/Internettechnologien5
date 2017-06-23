@@ -5,7 +5,7 @@ import javax.xml.ws.Endpoint;
 /**
  * Created by s-gheldd on 21.06.17.
  */
-public class Server {
+public class SOAPServer {
 
     public static void main(String[] args) {
         final String baseAdress = "http://localhost:8080";

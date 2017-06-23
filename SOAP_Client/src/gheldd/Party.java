@@ -33,21 +33,8 @@ public interface Party {
      */
     @WebMethod
     @WebResult(partName = "return")
-    @Action(input = "http://gheldd/Party/getDjRequest", output = "http://gheldd/Party/getDjResponse")
-    public String getDj();
-
-    /**
-     * 
-     * @param arg0
-     * @return
-     *     returns boolean
-     */
-    @WebMethod
-    @WebResult(partName = "return")
-    @Action(input = "http://gheldd/Party/inviteRequest", output = "http://gheldd/Party/inviteResponse")
-    public boolean invite(
-        @WebParam(name = "arg0", partName = "arg0")
-        String arg0);
+    @Action(input = "http://gheldd/Party/getDatumRequest", output = "http://gheldd/Party/getDatumResponse")
+    public String getDatum();
 
     /**
      * 
@@ -56,8 +43,8 @@ public interface Party {
      */
     @WebMethod
     @WebResult(partName = "return")
-    @Action(input = "http://gheldd/Party/getDatumRequest", output = "http://gheldd/Party/getDatumResponse")
-    public String getDatum();
+    @Action(input = "http://gheldd/Party/getDjRequest", output = "http://gheldd/Party/getDjResponse")
+    public String getDj();
 
     /**
      * 
@@ -78,5 +65,18 @@ public interface Party {
     @WebResult(partName = "return")
     @Action(input = "http://gheldd/Party/getGuestListRequest", output = "http://gheldd/Party/getGuestListResponse")
     public StringArray getGuestList();
+
+    /**
+     * 
+     * @param arg0
+     * @return
+     *     returns boolean
+     */
+    @WebMethod
+    @WebResult(partName = "return")
+    @Action(input = "http://gheldd/Party/inviteRequest", output = "http://gheldd/Party/inviteResponse")
+    public boolean invite(
+        @WebParam(name = "arg0", partName = "arg0")
+        String arg0);
 
 }
